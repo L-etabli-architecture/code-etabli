@@ -1,3 +1,4 @@
+// Fix: correction extraction PDF pagerender
 import pdfParse from 'pdf-parse'
 
 export interface PdfChunk {
