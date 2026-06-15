@@ -64,7 +64,7 @@ export async function extractPdfChunks(buffer: Buffer): Promise<PdfChunk[]> {
                             let lastY: number | null = null
                             let text = ''
 
-                                                                for (const item of textContent.items as any[]) {
+                                                                                                            for (const item of textContent.items as {str: string; transform: number[]}[]) {
                                                                             const y = item.transform?.[5]
 
                               if (lastY !== null && Math.abs(y - lastY) > 5) {
